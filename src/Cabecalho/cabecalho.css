@@ -1,0 +1,104 @@
+.cabecalho {
+    background: #fff;
+    transition: all 0.5s;
+    z-index: 997;
+    height: 60px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    align-items: center !important;
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.cabecalho-container {
+    align-items: center !important;
+    justify-content: space-between !important;
+    display: flex !important;
+    width: 100%;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cabecalho-logo {
+    height: 10px;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    font-family: "Poppins", sans-serif;
+}
+
+@media (min-width: 500px) {
+    .cabecalho-logo {
+        padding-bottom: 2%;
+    }
+}
+
+.cabecalho-navbar {
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.cabecalho-navbar a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #222222;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+    text-decoration: none;
+}
+
+.cabecalho-navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+@media (max-width: 991px) {
+    .cabecalho-navbar ul {
+        display: none;
+    }
+}
+
+.cabecalho-navbar > ul > li {
+    white-space: nowrap;
+    padding: 10px 0 10px 28px;
+}
+
+.cabecalho-navbar li {
+    position: relative;
+}
+
+.cabecalho-navbar a:hover, .cabecalho-navbar .active, .cabecalho-navbar .active:focus, .cabecalho-navbar li:hover > a {
+    color: #0081FF;
+}
+
+.cabecalho-itens {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #222222;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+}

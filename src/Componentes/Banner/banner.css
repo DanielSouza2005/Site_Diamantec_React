@@ -1,0 +1,108 @@
+.banner {
+    width: 100%;
+    height: 90vh;
+    background: url(../../Imagens/banner.jpg) top left;
+    background-size: cover;
+    position: relative;
+    align-items: center !important;
+    display: flex !important;   
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.6);   
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 80vh;
+    }
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;    
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+}
+
+.banner-container h1 {
+    margin: 0;
+    color: #222222;
+    font-family: "Poppins", sans-serif; 
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;    
+}
+
+@media (max-width: 768px) {
+    .banner-container h1 {
+        font-size: 36px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 500px) {
+    .banner-container h1 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+.banner-container span {
+    color: #00DBF9;
+}
+
+.banner-container h2 {
+    color: #f1f1f1;
+    margin: 5px 0 15px 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;  
+}
+
+@media (max-width: 768px) {
+    .banner-container h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .banner-container h2 {
+        font-size: 16px;
+    }
+}
+
+.btn-saibamais {
+    display: flex !important;    
+}
+
+.btn-saibamais a {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background: #0081FF;
+    text-decoration: none;
+}
+
+.btn-saibamais a:hover {
+    background: #d42677;
+}
+

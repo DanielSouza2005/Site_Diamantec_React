@@ -1,0 +1,45 @@
+.rodape {
+    background: #fff;
+    padding: 0 0 30px 0;
+    color: #444444;
+    font-size: 14px;
+    background: #f1f6fe;   
+}
+
+.rodape-container {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+
+    width: 100%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 992px) {
+    .rodape-container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 768px) {
+    .rodape-container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 576px) {
+    .rodape-container {
+        max-width: 540px;
+    }
+}
+
+.copyright {
+    text-align: center;
+    float: left;
+}
+
+.copyright strong {
+    font-weight: bolder;
+}

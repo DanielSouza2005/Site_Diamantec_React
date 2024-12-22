@@ -1,0 +1,90 @@
+.servicos-card {
+    align-items: stretch !important;
+    display: flex !important;
+    margin-bottom: 3rem !important;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-top: var(--bs-gutter-y);
+}
+
+@media (min-width: 1060px) {
+    .servicos-card {
+        margin-bottom: 0 !important;
+        flex: 0 0 auto !important;
+        width: 25% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .servicos-card {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+.servicos-card-container {
+    text-align: center;
+    border: 1px solid #e2eefd;
+    padding: 80px 20px;
+    transition: all ease-in-out 0.3s;
+    background: #fff;
+}
+
+.servicos-card-container:hover {
+    border-color: #fff;
+    box-shadow: 0px 0 25px 0 rgba(16, 110, 234, 0.1);
+}
+
+.servicos-card-container:hover
+.servicos-card-icone-box {
+    border-color: #ff2e8f;
+}
+
+.servicos-card-container:hover
+.servicos-card-icone {
+    color: #ff2e8f
+}
+
+.servicos-card-container:hover h4 {
+    color: #ff2e8f
+}
+
+.servicos-card-icone-box {
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    background: #f1f6fe;
+    border-radius: 4px;
+    border: 1px solid #deebfd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: ease-in-out 0.3s;
+}
+
+.servicos-card-icone {
+    font-size: 28px;
+    transition: ease-in-out 0.3s;
+    color: #0081FF;
+}
+
+.servicos-card-container h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+    margin-top: 0;
+    line-height: 1.2;
+    color: #222222;
+    transition: ease-in-out 0.3s;   
+}
+
+.servicos-card-container p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 0;
+}

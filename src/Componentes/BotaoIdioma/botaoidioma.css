@@ -1,0 +1,26 @@
+.botao-ingles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #222222;
+    white-space: nowrap;
+    position: relative;
+}
+
+.botao-ingles:hover{
+    cursor: pointer;
+}
+
+.botao-ingles::after{
+    content: none !important;
+}
+
+.botao-ingles img {
+    height: 21.5px;
+    width: 45px;
+    border: 1px;
+    border-radius: 5px;
+}

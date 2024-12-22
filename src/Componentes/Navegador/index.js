@@ -1,15 +1,22 @@
 import { HiOutlineViewList } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-import ingles from '../../Imagens/ingles.png';
+import BotaoIdioma from "../BotaoIdioma";
+import NavegadorLink from "../NavegadorLink";
 import "./navegador.css";
 
-const Navegador = ({ itens_navbar, clickNavMobile, MenuAberto }) => {
+const Navegador = ({ itens_navbar, clickNavMobile, MenuAberto, onClickNavbar, onChangeLanguage, idioma }) => {
+
+    const onClickEvent = (id) => {
+        if (MenuAberto) clickNavMobile();
+        onClickNavbar(id);
+    };
+
     return (
         <>
             {
                 MenuAberto &&
                 <div className="cabecalho-navbar-overlay"
-                     onClick={clickNavMobile}>
+                    onClick={clickNavMobile}>
                 </div>
             }
 
@@ -20,45 +27,34 @@ const Navegador = ({ itens_navbar, clickNavMobile, MenuAberto }) => {
                 <ul>
 
                     {
-                        MenuAberto ?
-                            <span className="btn-fechar"
-                                  onClick={clickNavMobile}>
-                                <AiOutlineClose />
-                            </span>
-                            :
-                            ""
+                        MenuAberto &&
+                        <span
+                            className="btn-fechar"
+                            onClick={clickNavMobile}>
+                            <AiOutlineClose />
+                        </span>
                     }
 
                     {itens_navbar.map((item) => (
                         <li key={item.index}>
 
-                            {
-                              MenuAberto ?
-                                <a href={item.href}
-                                   className="cabecalho-itens"
-                                   onClick={clickNavMobile}>
-                                    {item.nome}
-                                </a>
-                                :
-                                <a href={item.href}
-                                   className="cabecalho-itens"
-                                >
-                                    {item.nome}
-                                </a>
-                            }
+                            <NavegadorLink  
+                                href={item.href}
+                                ativo={item.active}
+                                nome={item.nome}
+                                id={item.index}
+                                onClick={() => onClickEvent(item.index)}
+                            />                           
 
                         </li>
                     ))}
 
                     <li>
-                        <a className="cabecalho-itens"
-                           href="#banner"
-                        >
-                            <img className="botao-ingles"
-                                 alt="Trocar Idioma"
-                                 src={ingles} 
-                            />
-                        </a>
+                        <BotaoIdioma
+                            alt="Trocar Idioma"                            
+                            onChangeLanguage={() => onChangeLanguage()}
+                            idioma={idioma}
+                        />
                     </li>
                 </ul>
 

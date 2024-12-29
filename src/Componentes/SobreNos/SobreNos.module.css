@@ -1,0 +1,105 @@
+.sobre {
+    background-color: #f6f9fe;
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.sobreContainer {
+    width: 100%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 992px) {
+    .sobreContainer {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobreContainer {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sobreContainer {
+        max-width: 540px;
+    }
+}
+
+.sobreTitulo {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.sobreTitulo h3 {
+    margin: 15px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #4128FF;
+}
+
+.sobreConteudo {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1* var(--bs-gutter-y));
+    margin-right: calc(-.5* var(--bs-gutter-x));
+    margin-left: calc(-.5* var(--bs-gutter-x));
+}
+
+.sobreConteudoImagem {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-top: var(--bs-gutter-y);
+}
+
+@media (min-width: 992px) {
+    .sobreConteudoImagem {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+.sobreConteudoImagem img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sobreConteudoTexto {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-top: var(--bs-gutter-y);
+    text-align: justify;
+    text-justify: inter-word;
+    justify-content: center !important;
+    flex-direction: column !important;
+    display: flex !important;
+    padding-top: 1.5rem !important;
+}
+
+@media (min-width: 992px) {
+    .sobreConteudoTexto {
+        flex: 0 0 auto;
+        width: 50%;
+        padding-top: 0 !important;
+    }
+}
+
+.sobreConteudoTexto h3{
+    font-weight: 600;
+    font-size: 26px;    
+    margin-top: 0;
+    margin-bottom: .5rem;
+    line-height: 1.2;
+}

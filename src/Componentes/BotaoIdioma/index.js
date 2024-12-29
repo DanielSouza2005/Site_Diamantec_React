@@ -2,7 +2,7 @@ import "./botaoidioma.css";
 import ingles from "../../Imagens/ingles.png";
 import pt_br from "../../Imagens/pt-br.png";
 
-const BotaoIdioma = ({ alt, href, idioma, onChangeLanguage }) => {
+const BotaoIdioma = ({ alt, idioma, onChangeLanguage }) => {
     let imagem = "";
 
     if (idioma === "pt-br") imagem = ingles;

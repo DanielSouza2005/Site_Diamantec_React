@@ -4,12 +4,13 @@ import { useEffect, useState } from 'react';
 import Cabecalho from './Componentes/Cabecalho';
 import Banner from './Componentes/Banner';
 import Servicos from './Componentes/Servicos';
+import Rodape from './Componentes/Rodape';
 
 import { IoIosCamera } from "react-icons/io";
 import { FaComputer } from "react-icons/fa6";
 import { IoCodeSlash } from "react-icons/io5";
 import { BsBriefcaseFill } from "react-icons/bs";
-import Rodape from './Componentes/Rodape';
+import SobreNos from './Componentes/SobreNos';
 
 function App() {
   function Traduzir(idioma) {
@@ -85,6 +86,12 @@ function App() {
 
       setServicosTitulo("Nossos Serviços");
 
+      setSobreNosTitulo("Sobre Nós");
+      setSobreNosAlt("Mesa com computadores em cima");
+      setSobreNosTexto(["Na Diamantec, nosso compromisso é oferecer o melhor para nossos clientes, e para isso, contamos com uma equipe de profissionais altamente especializados em áreas estratégicas como marketing, desenvolvimento de websites e softwares de gerenciamento.",
+        "Acreditamos que todos nasceram para brilhar, e nossa missão é potencializar esse brilho em cada cliente, com dedicação, excelência e comprometimento.",
+        "Venha fazer parte da família Diamantec e transforme suas ideias em grandes conquistas!"]);
+
       setTextoDireitos("Todos os Direitos Reservados");
     }
     else if (idioma === "en") {
@@ -159,6 +166,12 @@ function App() {
 
       setServicosTitulo("Our Services");
 
+      setSobreNosTitulo("About Us");
+      setSobreNosAlt("Table with computers on top");
+      setSobreNosTexto(["At Diamantec, our commitment is to deliver the best to our clients. To achieve this, we rely on a team of highly specialized professionals in strategic areas such as marketing, website development, and management software.",
+                        "We believe everyone was born to shine, and our mission is to amplify that brilliance in each client, with dedication, excellence, and commitment.",
+                        "Join the Diamantec family and turn your ideas into great achievements!"]);
+
       setTextoDireitos("All Rights Reserved");
     }
   }
@@ -171,6 +184,10 @@ function App() {
   const [bannerBotao, setBannerBotao] = useState("");
 
   const [servicosTitulo, setServicosTitulo] = useState("");
+
+  const [sobreNosTitulo, setSobreNosTitulo] = useState("");
+  const [sobreNosAlt, setSobreNosAlt] = useState("");
+  const [sobreNosTexto, setSobreNosTexto] = useState("");
 
   let [textoDireitos, setTextoDireitos] = useState("");
 
@@ -292,7 +309,13 @@ function App() {
         itens={itens_servicos}
       />
 
-      <Rodape 
+      <SobreNos
+        titulo={sobreNosTitulo}
+        alt={sobreNosAlt}
+        textos={sobreNosTexto}
+      />
+
+      <Rodape
         empresa={empresa}
         textoDireitos={textoDireitos}
       />

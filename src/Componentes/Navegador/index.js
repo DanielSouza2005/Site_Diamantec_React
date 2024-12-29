@@ -38,20 +38,20 @@ const Navegador = ({ itens_navbar, clickNavMobile, MenuAberto, onClickNavbar, on
                     {itens_navbar.map((item) => (
                         <li key={item.index}>
 
-                            <NavegadorLink  
+                            <NavegadorLink
                                 href={item.href}
                                 ativo={item.active}
                                 nome={item.nome}
                                 id={item.index}
                                 onClick={() => onClickEvent(item.index)}
-                            />                           
+                            />
 
                         </li>
                     ))}
 
                     <li>
                         <BotaoIdioma
-                            alt="Trocar Idioma"                            
+                            alt="Trocar Idioma"
                             onChangeLanguage={() => onChangeLanguage()}
                             idioma={idioma}
                         />

@@ -2,7 +2,7 @@ import { HiOutlineViewList } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import BotaoIdioma from "../BotaoIdioma";
 import NavegadorLink from "../NavegadorLink";
-import "./navegador.css";
+import styles from "./navegador.module.css";
 
 const Navegador = ({ itens_navbar, clickNavMobile, MenuAberto, onClickNavbar, onChangeLanguage, idioma }) => {
 
@@ -15,21 +15,20 @@ const Navegador = ({ itens_navbar, clickNavMobile, MenuAberto, onClickNavbar, on
         <>
             {
                 MenuAberto &&
-                <div className="cabecalho-navbar-overlay"
+                <div
                     onClick={clickNavMobile}>
                 </div>
             }
 
-            <nav
-                id="cabecalho-navbar"
-                className={`cabecalho-navbar ${MenuAberto ? "menu-aberto" : ""}`}
+            <nav className={`${styles.cabecalhoNavbar} 
+                             ${MenuAberto ? styles.menuAberto : ""}
+                            `}
             >
                 <ul>
-
                     {
                         MenuAberto &&
                         <span
-                            className="btn-fechar"
+                            className={styles.btnFechar}
                             onClick={clickNavMobile}>
                             <AiOutlineClose />
                         </span>
@@ -59,7 +58,7 @@ const Navegador = ({ itens_navbar, clickNavMobile, MenuAberto, onClickNavbar, on
                 </ul>
 
                 <HiOutlineViewList
-                    className="cabecalho-navbar-mobile"
+                    className={styles.cabecalhoNavbarMobile}
                     size={30}
                     onClick={clickNavMobile}
                 />

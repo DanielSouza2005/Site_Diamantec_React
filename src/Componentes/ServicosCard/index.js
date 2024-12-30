@@ -1,10 +1,10 @@
-import "./servicoscard.css";
+import styles from "./servicoscard.module.css";
 
 const ServicosCard = ({ titulo, texto, icone }) => {
     return (
-        <div className="servicos-card">
-            <div className="servicos-card-container">
-                <div className="servicos-card-icone-box">
+        <div className={styles.servicosCard}>
+            <div className={styles.servicosCardContainer}>
+                <div className={styles.servicosCardIconeBox}>
                     {icone}
                 </div>
                 <h4>{titulo}</h4>

@@ -1,10 +1,10 @@
-import "./rodape.css";
+import styles from "./rodape.module.css";
 
 const Rodape = ({ empresa, textoDireitos }) => {
     return (
-        <footer className="rodape">
-            <div className="rodape-container">
-                <div className="copyright">
+        <footer className={styles.rodape}>
+            <div className={styles.rodapeContainer}>
+                <div className={styles.copyright}>
                     © Copyright 
                     <strong>
                         <span> {empresa}</span>

@@ -1,10 +1,12 @@
-import "./navegadorlink.css";
+import styles from "./navegadorlink.module.css";
 
 const NavegadorLink = ({ href, ativo, nome, onClick, id }) => {
     return (
         <a
             href={href}
-            className={`cabecalho-itens ${ativo ? "cabecalho-navbar-link-ativo" : ""}`}
+            className={`${styles.cabecalhoItens}
+                        ${ativo ? styles.cabecalhoNavbarLinkAtivo : ""}
+                       `}
             onClick={() => onClick(id)}
         >
             {nome}

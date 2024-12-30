@@ -1,17 +1,16 @@
 import Navegador from '../Navegador';
 import logo from '../../Imagens/logo.png';
-import "./cabecalho.css";
+import styles from "./cabecalho.module.css";
 
 const Cabecalho = (props) => {
     return(
         <header id="cabecalho"
-                className="cabecalho">
-            <div className="cabecalho-container">
-                <a className="cabecalho-logo"
+                className={styles.cabecalho}>
+            <div className={styles.cabecalhoContainer}>
+                <a className={styles.cabecalhoLogo}
                    href="#banner"
                 > 
-                    <img className="cabecalho-logo-img" 
-                         alt="Diamantec"
+                    <img alt="Diamantec"
                          src={logo} 
                     />
                 </a>

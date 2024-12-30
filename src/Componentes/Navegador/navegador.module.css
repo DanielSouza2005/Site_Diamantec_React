@@ -1,4 +1,4 @@
-.cabecalho-navbar {
+.cabecalhoNavbar {
     flex-shrink: 1;
     padding: 0;
     display: flex;
@@ -9,7 +9,7 @@
     padding-bottom: .5rem;
 }
 
-.cabecalho-navbar a {
+.cabecalhoNavbar a {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,7 +23,7 @@
     text-decoration: none;
 }
 
-.cabecalho-navbar a::after {
+.cabecalhoNavbar a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -35,15 +35,15 @@
     transition: width 0.3s ease;
 }
 
-.cabecalho-navbar a:hover {
+.cabecalhoNavbar a:hover {
     color: #0081FF;
 }
 
-.cabecalho-navbar a:hover::after {
+.cabecalhoNavbar a:hover::after {
     width: 100%;
 }
 
-.cabecalho-navbar ul {
+.cabecalhoNavbar ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -52,7 +52,7 @@
 }
 
 @media (max-width: 991px) {
-    .cabecalho-navbar ul {
+    .cabecalhoNavbar ul {
         display: none;
         flex-direction: column;
         position: absolute;
@@ -65,21 +65,21 @@
         z-index: 999;
     }
 
-    .cabecalho-navbar.menu-aberto ul {
+    .cabecalhoNavbar.menuAberto ul {
         display: flex;
     }
 }
 
-.cabecalho-navbar>ul>li {
+.cabecalhoNavbar>ul>li {
     white-space: nowrap;
     padding: 10px 0 10px 28px;
 }
 
-.cabecalho-navbar li {
+.cabecalhoNavbar li {
     position: relative;
 }
 
-.cabecalho-itens {
+.cabecalhoItens {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -91,7 +91,7 @@
     position: relative;
 }
 
-.cabecalho-itens:before {
+.cabecalhoItens:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -104,7 +104,7 @@
     transition: all 0.3s ease-in-out 0s;
 }
 
-.cabecalho-navbar-mobile {
+.cabecalhoNavbarMobile {
     color: #222222;
     font-size: 28px;
     cursor: pointer;
@@ -116,12 +116,12 @@
 }
 
 @media (max-width: 991px) {
-    .cabecalho-navbar-mobile {
+    .cabecalhoNavbarMobile {
         display: block;
     }
 }
 
-.cabecalho-navbar .btn-fechar {
+.cabecalhoNavbar .btnFechar {
     position: absolute;
     top: 20px;
     right: 20px;

@@ -6,7 +6,7 @@
     background: #f1f6fe;   
 }
 
-.rodape-container {
+.rodapeContainer {
     padding-top: 1.5rem !important;
     padding-bottom: 1.5rem !important;
 
@@ -18,19 +18,19 @@
 }
 
 @media (max-width: 992px) {
-    .rodape-container {
+    .rodapeContainer {
         max-width: 960px;
     }
 }
 
 @media (max-width: 768px) {
-    .rodape-container {
+    .rodapeContainer {
         max-width: 720px;
     }
 }
 
 @media (max-width: 576px) {
-    .rodape-container {
+    .rodapeContainer {
         max-width: 540px;
     }
 }

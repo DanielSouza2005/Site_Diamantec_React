@@ -187,7 +187,7 @@ function App() {
 
   const [sobreNosTitulo, setSobreNosTitulo] = useState("");
   const [sobreNosAlt, setSobreNosAlt] = useState("");
-  const [sobreNosTexto, setSobreNosTexto] = useState("");
+  const [sobreNosTexto, setSobreNosTexto] = useState([]);
 
   let [textoDireitos, setTextoDireitos] = useState("");
 

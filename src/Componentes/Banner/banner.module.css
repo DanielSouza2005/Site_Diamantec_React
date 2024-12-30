@@ -26,7 +26,7 @@
     }
 }
 
-.banner-container {
+.bannerContainer {
     position: relative;
     width: 100%;    
     padding-right: var(--bs-gutter-x, .75rem);
@@ -36,7 +36,7 @@
     text-align: left;
 }
 
-.banner-container h1 {
+.bannerContainer h1 {
     margin: 0;
     color: #222222;
     font-family: "Poppins", sans-serif; 
@@ -46,24 +46,24 @@
 }
 
 @media (max-width: 768px) {
-    .banner-container h1 {
+    .bannerContainer h1 {
         font-size: 36px;
         line-height: 36px;
     }
 }
 
 @media (max-width: 500px) {
-    .banner-container h1 {
+    .bannerContainer h1 {
         font-size: 24px;
         line-height: 36px;
     }
 }
 
-.banner-container span {
+.bannerContainer span {
     color: #00DBF9;
 }
 
-.banner-container h2 {
+.bannerContainer h2 {
     color: #f1f1f1;
     margin: 5px 0 15px 0;
     font-size: 24px;
@@ -72,22 +72,22 @@
 }
 
 @media (max-width: 768px) {
-    .banner-container h2 {
+    .bannerContainer h2 {
         font-size: 20px;
     }
 }
 
 @media (max-width: 500px) {
-    .banner-container h2 {
+    .bannerContainer h2 {
         font-size: 16px;
     }
 }
 
-.btn-saibamais {
+.btnSaibamais {
     display: flex !important;    
 }
 
-.btn-saibamais a {
+.btnSaibamais a {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     font-weight: 500;
@@ -102,7 +102,7 @@
     text-decoration: none;
 }
 
-.btn-saibamais a:hover {
+.btnSaibamais a:hover {
     background: #d42677;
 }
 

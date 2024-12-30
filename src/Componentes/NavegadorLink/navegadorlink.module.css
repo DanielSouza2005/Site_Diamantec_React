@@ -1,0 +1,16 @@
+.cabecalhoNavBarLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #222222;
+    white-space: nowrap;
+    position: relative;
+}
+
+.cabecalhoNavbarLinkAtivo {
+    color: #0081FF !important;
+    border-bottom: 2px solid;
+}

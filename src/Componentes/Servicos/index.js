@@ -1,15 +1,16 @@
 import ServicosCard from "../ServicosCard";
-import "./servicos.css";
+import styles from "./servicos.module.css";
 
 const Servicos = ({ itens, titulo }) => {
     return (
         <section id="servicos"
-            className="servicos">
-            <div className="servicos-container">
-                <div className="servicos-titulo">
+                 className={styles.servicos}
+        >
+            <div className={styles.servicosContainer}>
+                <div className={styles.servicosTitulo}>
                     <h3>{titulo}</h3>
                 </div>
-                <div className="servicos-cards">
+                <div className={styles.servicosCards}>
                     {
                        itens.map((servico) => (
                          <ServicosCard 

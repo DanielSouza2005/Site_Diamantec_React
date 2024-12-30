@@ -1,4 +1,4 @@
-.botao-ingles {
+.botaoIngles {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,15 +10,15 @@
     position: relative;
 }
 
-.botao-ingles:hover{
+.botaoIngles:hover{
     cursor: pointer;
 }
 
-.botao-ingles::after{
+.botaoIngles::after{
     content: none !important;
 }
 
-.botao-ingles img {
+.botaoIngles img {
     height: 21.5px;
     width: 45px;
     border: 1px;

@@ -19,10 +19,10 @@ const SobreNos = ({ titulo, alt, textos }) => {
                     <div className={styles.sobreConteudoTexto}>
                         {
                             textos.map((texto, index) => (
-                                <>
-                                    <h3 key={index}></h3>
-                                    {texto}
-                                </>
+                                <div key={index}>
+                                    <h3></h3>
+                                    <p>{texto}</p>
+                                </div>
                             ))
                         }
                     </div>

@@ -1,4 +1,4 @@
-import "./botaoidioma.css";
+import styles from "./botaoidioma.module.css";
 import ingles from "../../Imagens/ingles.png";
 import pt_br from "../../Imagens/pt-br.png";
 
@@ -9,7 +9,7 @@ const BotaoIdioma = ({ alt, idioma, onChangeLanguage }) => {
     if (idioma === "en") imagem = pt_br;
 
     return (
-        <a className="botao-ingles"
+        <a className={styles.botaoIngles}
             onClick={() => onChangeLanguage()}
         >
             <img alt={alt}

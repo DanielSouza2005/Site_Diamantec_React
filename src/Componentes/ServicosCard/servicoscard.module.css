@@ -1,4 +1,4 @@
-.servicos-card {
+.servicosCard {
     align-items: stretch !important;
     display: flex !important;
     margin-bottom: 3rem !important;
@@ -11,7 +11,7 @@
 }
 
 @media (min-width: 1060px) {
-    .servicos-card {
+    .servicosCard {
         margin-bottom: 0 !important;
         flex: 0 0 auto !important;
         width: 25% !important;
@@ -19,13 +19,13 @@
 }
 
 @media (min-width: 768px) {
-    .servicos-card {
+    .servicosCard {
         flex: 0 0 auto;
         width: 50%;
     }
 }
 
-.servicos-card-container {
+.servicosCardContainer {
     text-align: center;
     border: 1px solid #e2eefd;
     padding: 80px 20px;
@@ -33,26 +33,22 @@
     background: #fff;
 }
 
-.servicos-card-container:hover {
+.servicosCardContainer:hover {
     border-color: #fff;
     box-shadow: 0px 0 25px 0 rgba(16, 110, 234, 0.1);
 }
 
-.servicos-card-container:hover
-.servicos-card-icone-box {
+.servicosCardContainer:hover
+.servicosCardIconeBox {
     border-color: #ff2e8f;
-}
-
-.servicos-card-container:hover
-.servicos-card-icone {
     color: #ff2e8f
 }
 
-.servicos-card-container:hover h4 {
+.servicosCardContainer:hover h4 {
     color: #ff2e8f
 }
 
-.servicos-card-icone-box {
+.servicosCardIconeBox {
     margin: 0 auto;
     width: 64px;
     height: 64px;
@@ -64,15 +60,12 @@
     justify-content: center;
     margin-bottom: 20px;
     transition: ease-in-out 0.3s;
-}
-
-.servicos-card-icone {
     font-size: 28px;
     transition: ease-in-out 0.3s;
     color: #0081FF;
 }
 
-.servicos-card-container h4 {
+.servicosCardContainer h4 {
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 24px;
@@ -82,7 +75,7 @@
     transition: ease-in-out 0.3s;   
 }
 
-.servicos-card-container p {
+.servicosCardContainer p {
     line-height: 24px;
     font-size: 14px;
     margin-bottom: 0;

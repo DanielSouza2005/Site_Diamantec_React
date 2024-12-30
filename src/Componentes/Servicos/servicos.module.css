@@ -3,7 +3,7 @@
     overflow: hidden;
 }
 
-.servicos-container {
+.servicosContainer {
     width: 100%;
     padding-right: 2rem;
     padding-left: 2rem;
@@ -12,27 +12,27 @@
 }
 
 @media (max-width: 992px) {
-    .servicos-container {
+    .servicosContainer {
         max-width: 960px;
     }
 }
 @media (max-width: 768px) {
-    .servicos-container {
+    .servicosContainer {
         max-width: 720px;
     }
 }
 @media (max-width: 576px) {
-    .servicos-container {
+    .servicosContainer {
         max-width: 540px;
     }
 }
 
-.servicos-titulo {
+.servicosTitulo {
     text-align: center;
     padding-bottom: 30px;
 }
 
-.servicos-titulo h3 {
+.servicosTitulo h3 {
     margin: 15px 0 0 0;
     font-size: 32px;
     font-weight: 700;
@@ -41,7 +41,7 @@
     font-family: "Roboto", sans-serif;
 }
 
-.servicos-cards {
+.servicosCards {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     display: flex;

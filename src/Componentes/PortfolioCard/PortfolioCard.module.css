@@ -1,0 +1,64 @@
+.portfolioConteudoCard {
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+
+.portfolioConteudoCard:hover {
+    transform: translateY(-10px);
+}
+
+.portfolioConteudoCard:hover .portfolioConteudoCardInfo {
+    opacity: 1;
+    bottom: 16px; 
+}
+
+.portfolioConteudoCard img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.portfolioConteudoCardInfo {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    transition: all ease-in-out 0.5s;
+    padding: 0 18px;
+    width: 100%;
+    max-height: fit-content;
+    box-sizing: border-box;
+}
+
+.portfolioConteudoCardInfo h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222222;
+}
+
+.portfolioConteudoCardInfo p {
+    color: #555555;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.portfolioConteudoCardInfo a {
+    position: absolute;
+    right: 40px;
+    font-size: 24px;
+    top: calc(50% - 18px);
+    color: #3c3c3c;
+    text-decoration: none;
+}
+
+.portfolioConteudoCardInfoSection {
+    background: rgba(255, 255, 255, 0.9);
+    position: relative;
+    height: 100%;
+    max-height: fit-content;
+    box-sizing: border-box;
+    padding: 10px;
+}

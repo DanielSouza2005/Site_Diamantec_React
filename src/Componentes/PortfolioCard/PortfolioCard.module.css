@@ -62,3 +62,7 @@
     box-sizing: border-box;
     padding: 10px;
 }
+
+.portfolioConteudoCardInfoSection:hover a {
+    cursor: pointer;
+}

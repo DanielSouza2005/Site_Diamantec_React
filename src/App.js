@@ -5,6 +5,8 @@ import Cabecalho from './Componentes/Cabecalho';
 import Banner from './Componentes/Banner';
 import Servicos from './Componentes/Servicos';
 import Rodape from './Componentes/Rodape';
+import SobreNos from './Componentes/SobreNos';
+import Portfolio from './Componentes/Portfolio';
 
 import { IoIosCamera } from "react-icons/io";
 import { FaComputer } from "react-icons/fa6";
@@ -12,9 +14,6 @@ import { IoCodeSlash } from "react-icons/io5";
 import { BsBriefcaseFill } from "react-icons/bs";
 
 import portfolioImages from "./Imagens/portfolio";
-
-import SobreNos from './Componentes/SobreNos';
-import Portfolio from './Componentes/Portfolio';
 
 function App() {
   function Traduzir(idioma) {
@@ -99,42 +98,42 @@ function App() {
       setPortfolioTitulo("Confira o nosso Portfólio");
       setPortfolioItens([
         {
-          id: 0,
+          id: 1,
           imagem: portfolioImages.pinguinhos,
           alt: " Fotografia de biscoitos de chocolate com pedaços grandes de chocolate, dispostos sobre um fundo texturizado. No centro da imagem, em destaque, há uma logo com o nome 'Pinguinho' e o slogan 'Para adoçar a sua vida!.",
           nome: "Pinguinhos",
           area: "Cookie Shop"
         },
         {
-          id: 1,
+          id: 2,
           imagem: portfolioImages.pawsPets,
           alt: "Folheto informativo da petshop Paws & Pets, oferecendo serviços de banho, tosa, adestramento, além de cuidados veterinários. O folheto apresenta um design clean e convidativo, com a imagem de um cachorro sorridente.",
           nome: "Paws&Pets",
           area: "Animal Center"
         },
         {
-          id: 2,
+          id: 3,
           imagem: portfolioImages.pegasus,
           alt: "Logo minimalista em branco de um unicórnio alado sobre um fundo azul claro com textura. O unicórnio possui um design geométrico e moderno.",
           nome: "Pégasus",
           area: "Linhas Aéreas"
         },
         {
-          id: 3,
+          id: 4,
           imagem: portfolioImages.guarai,
           alt: "Rótulo de uma lata de refrigerante Guaraná Brasilis de 350ml, com design vibrante e ilustrações de frutas de guaraná. A marca destaca sua tradição desde 1924.",
           nome: "Guaraí",
           area: "Refrigerante"
         },
         {
-          id: 4,
+          id: 5,
           imagem: portfolioImages.dyonisius,
           alt: "Rótulo de um energético Dionysus com a imagem de perfil de Dionísio, deus grego do vinho, em um círculo. O fundo é roxo e a frase 'A energia de um deus para você!' em destaque.",
           nome: "Dionysus",
           area: "Drink Energético"
         },
         {
-          id: 5,
+          id: 6,
           imagem: portfolioImages.cookies,
           alt: " Fotografia de uma pilha de biscoitos de chocolate com gotas de chocolate derretidas. Os biscoitos possuem textura macia e são empilhados em um fundo escuro. A imagem inclui ilustrações divertidas com os dizeres 'Pinguinhos', 'Camadinha croc croc', 'Chocolate escorrendo' e 'Massa macia'.",
           nome: "Pinguinhos",
@@ -225,42 +224,42 @@ function App() {
       setPortfolioTitulo("Check our Portfolio");
       setPortfolioItens([
         {
-          id: 0,
+          id: 1,
           imagem: portfolioImages.pinguinhos,
           alt: "Chocolate chip cookies with large chocolate chunks, arranged on a textured background. In the center of the image, highlighted, there is a logo with the name 'Pinguinho' and the slogan 'Para adoçar a sua vida!' (which translates to 'To sweeten your life!').",
           nome: "Pinguinhos",
           area: "Cookie Shop"
         },
         {
-          id: 1,
+          id: 2,
           imagem: portfolioImages.pawsPets,
           alt: "Informative flyer from the pet shop Paws & Pets, offering bathing, grooming, training services, as well as veterinary care. The flyer has a clean and inviting design, with the image of a smiling dog.",
           nome: "Paws&Pets",
           area: "Animal Center"
         },
         {
-          id: 2,
+          id: 3,
           imagem: portfolioImages.pegasus,
           alt: "Minimalist white logo of a winged unicorn on a light blue textured background. The unicorn has a geometric and modern design.",
           nome: "Pégasus",
           area: "Airlines"
         },
         {
-          id: 3,
+          id: 4,
           imagem: portfolioImages.guarai,
           alt: "Label of a 350ml can of Guaraná Brasilis soda, with a vibrant design and illustrations of guarana fruits. The brand highlights its tradition since 1924.",
           nome: "Guaraí",
           area: "Soda"
         },
         {
-          id: 4,
+          id: 5,
           imagem: portfolioImages.dyonisius,
           alt: "Label of a Dionysus energy drink featuring a profile image of Dionysus, the Greek god of wine, in a circle. The background is purple and the phrase 'The energy of a god for you!' is highlighted.",
           nome: "Dionysus",
           area: "Energy Drink"
         },
         {
-          id: 5,
+          id: 6,
           imagem: portfolioImages.cookies,
           alt: "Photograph of a stack of chocolate chip cookies with melted chocolate drips. The cookies have a soft texture and are stacked on a dark background. The image includes fun illustrations with the words 'Pinguinhos' (which translates to 'Little Penguins'), 'Camadinha croc croc' (meaning 'Crispy layers'), 'Chocolate escorrendo' (meaning 'Melting chocolate'), and 'Massa macia' (meaning 'Soft dough').",
           nome: "Pinguinhos",
@@ -291,6 +290,10 @@ function App() {
 
   const [portfolioTitulo, setPortfolioTitulo] = useState("");
   const [portfolioItens, setPortfolioItens] = useState([]);
+  const [lightboxController, setLightboxController] = useState({
+    toggler: false,
+    slide: 1
+  });
 
   const [textoDireitos, setTextoDireitos] = useState("");
 
@@ -319,7 +322,14 @@ function App() {
       if (idiomaGlobal === "pt-br") return "en";
       if (idiomaGlobal === "en") return "pt-br";
     });
-  }
+  };
+
+  const aoMostrarLightBox = (numero) => {
+		setLightboxController({
+			toggler: !lightboxController.toggler,
+			slide: numero
+		});    
+	}
 
   return (
     <div className="App">
@@ -352,13 +362,17 @@ function App() {
       <Portfolio
         titulo={portfolioTitulo}
         itens={portfolioItens}
+        toggler={lightboxController.toggler}
+        slide={lightboxController.slide}
+        aoMostrarPortfolioLightBox={aoMostrarLightBox}
+        sourceLightBox={Object.values(portfolioImages)}
       />
 
       <Rodape
         empresa={empresa}
         textoDireitos={textoDireitos}
       />
-    </div>
+    </div >
   );
 }
 

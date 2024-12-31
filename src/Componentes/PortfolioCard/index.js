@@ -1,7 +1,7 @@
 import styles from "./PortfolioCard.module.css";
 import { FaMagnifyingGlassPlus } from "react-icons/fa6";
 
-const PortfolioCard = ({ id, imagem, alt, nome, area }) => {
+const PortfolioCard = ({ id, imagem, alt, nome, area, aoMostrarLightBox }) => {   
     return (
         <div
             className={styles.portfolioConteudoCard}
@@ -16,17 +16,14 @@ const PortfolioCard = ({ id, imagem, alt, nome, area }) => {
                 <div className={styles.portfolioConteudoCardInfoSection}>
                     <h4>{nome}</h4>
                     <p>{area}</p>
-                    <a
-                        href={imagem}
-                        target="_blank"
-                        rel="noreferrer"
-                    >
+                    <a rel="noreferrer">
                         <FaMagnifyingGlassPlus
                             size={18}
+                            onClick={() => aoMostrarLightBox(id)}
                         />
                     </a>
                 </div>
-            </div>
+            </div>            
         </div>
     );
 }

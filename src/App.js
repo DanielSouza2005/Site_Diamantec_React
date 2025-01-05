@@ -13,6 +13,7 @@ import ReducerMostraNavegador, { MOSTRAR_MENU } from "./Reducer/MostraNavegador"
 import ReducerLightBox, { MOSTRAR_LIGHTBOX } from "./Reducer/LightBox";
 
 import portfolioImages from "./Imagens/portfolio";
+import timeImages from "./Imagens/time";
 
 import { IoIosCamera } from "react-icons/io";
 import { FaComputer } from "react-icons/fa6";
@@ -149,31 +150,31 @@ function App() {
       setTime([
         {
           id: 0,
-          imagem: "",
-          alt: "",
-          nome: "",
-          cargo: "Designer Gráfica"
+          imagem: timeImages.sarahJhonson,
+          alt: "Mulher sorridente com cabelo cacheado preso em um coque, usando uma faixa de cabelo laranja com detalhes em branco e vestido rosa escuro.",
+          nome: "Sarah Jhonson",
+          cargo: "Arquiteta Visual Criativa"
         },
         {
           id: 1,
-          imagem: "",
-          alt: "",
-          nome: "",
-          cargo: "Desenvolvedor Front-End"
+          imagem: timeImages.walterWhite,
+          alt: "Homem jovem sorridente com cabelo curto castanho, barba rala, usando óculos de armação preta e moletom preto com capuz, com um fundo desfocado de neve.",
+          nome: "Walter White",
+          cargo: "Designer de Experiência Frontend"
         },
         {
           id: 2,
-          imagem: "",
-          alt: "",
-          nome: "",
-          cargo: "Desenvolvedor Back-End"
+          imagem: timeImages.brianDoe,
+          alt: "Homem jovem sorridente com barba curta e cabelo curto preto, usando uma camiseta amarela, com fundo bege texturizado.",
+          nome: "Brian Doe",
+          cargo: "Engenheiro de Soluções Backend"
         },
         {
           id: 3,
-          imagem: "",
-          alt: "",
-          nome: "",
-          cargo: "Diretora Administrativa"
+          imagem: timeImages.amandaJepson,
+          alt: "Imagem de uma mulher sorridente com cabelo longo e ondulado, vestindo um suéter claro e um cardigã escuro, em um fundo neutro.",
+          nome: "Amanda Jepson",
+          cargo: "Estrategista Administrativa"
         },
       ]);
 
@@ -307,31 +308,31 @@ function App() {
       setTime([
         {
           id: 0,
-          imagem: "",
-          alt: "",
-          nome: "",
-          cargo: "Graphic Designer"
+          imagem: timeImages.sarahJhonson,
+          alt: "Smiling woman with curly hair tied in a bun, wearing an orange headband with white details and a dark pink dress.",
+          nome: "Sarah Jhonson",
+          cargo: "Creative Visual Architect"
         },
         {
           id: 1,
-          imagem: "",
-          alt: "",
-          nome: "",
-          cargo: "Front End Developer"
+          imagem: timeImages.walterWhite,
+          alt: "Smiling young man with short brown hair, light beard, wearing black-framed glasses and a black hoodie, with a blurred snowy background.",
+          nome: "Walter White",
+          cargo: "Frontend Experience Designer"
         },
         {
           id: 2,
-          imagem: "",
-          alt: "",
-          nome: "",
-          cargo: "Back End Developer"
+          imagem: timeImages.brianDoe,
+          alt: "Smiling young man with short black hair and a trimmed beard, wearing a yellow T-shirt, with a textured beige background.",
+          nome: "Brian Doe",
+          cargo: "Backend Solutions Engineer"
         },
         {
           id: 3,
-          imagem: "",
-          alt: "",
-          nome: "",
-          cargo: "Administrative Director"
+          imagem: timeImages.amandaJepson,
+          alt: "Image of a smiling woman with long wavy hair, wearing a light sweater and a dark cardigan, on a neutral background.",
+          nome: "Amanda Jepson",
+          cargo: "Chief Administrative Strategist"
         },
       ]);
 

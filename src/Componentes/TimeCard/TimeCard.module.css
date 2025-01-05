@@ -1,17 +1,91 @@
 .timeCard {
     align-items: stretch !important;
     display: flex !important;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    flex: 0 0 auto;
+    width: 25%;
 }
 
-@media (min-width: 992px) {
-    .timeCard {
-        flex: 0 0 auto;
-        width: 25%;
-    }
-}
-@media (min-width: 768px) {
+@media (max-width: 992px) {
     .timeCard {
         flex: 0 0 auto;
         width: 50%;
     }
+}
+
+@media (max-width: 768px) {
+    .timeCard {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+.timeCard:hover
+.social {
+    opacity: 1;
+}
+
+.timeCardConteudo {
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0px 2px 15px rgba(16, 110, 234, 0.15);
+}
+
+.timeCardConteudoImagem {
+    position: relative;
+    overflow: hidden;
+}
+
+.timeCardConteudoImagem img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.timeCardConteudoInfo {
+    padding: 25px 15px;
+}
+
+.timeCardConteudoInfo h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #222222;
+}
+
+.timeCardConteudoInfo span {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #444444;
+}
+
+.social {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    right: 0;
+    opacity: 0;
+    transition: ease-in-out 0.3s;
+    text-align: center;
+}
+
+.social a {
+    margin: 0 3px;
+    padding-top: 7px;
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    background: #0081ff;
+    display: inline-block;
+    transition: ease-in-out 0.3s;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social a:hover {
+    background: #ff2e8f;
 }

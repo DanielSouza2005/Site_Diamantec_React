@@ -16,10 +16,10 @@ const Cabecalho = (props) => {
                 </a>
                 
                 <Navegador 
-                    itens_navbar={props.itens_navbar}
+                    itensMenu={props.itensMenu}
                     clickNavMobile={props.mostraMenu}
                     MenuAberto={props.MenuAberto}
-                    onClickNavbar={props.onClickNavbar}
+                    onClickMenu={props.onClickMenu}
                     onChangeLanguage={props.onChangeLanguage}
                     idioma={props.idioma}
                 />   

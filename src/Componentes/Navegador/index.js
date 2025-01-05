@@ -4,11 +4,11 @@ import BotaoIdioma from "../BotaoIdioma";
 import NavegadorLink from "../NavegadorLink";
 import styles from "./navegador.module.css";
 
-const Navegador = ({ itens_navbar, clickNavMobile, MenuAberto, onClickNavbar, onChangeLanguage, idioma }) => {
+const Navegador = ({ itensMenu, clickNavMobile, MenuAberto, onClickMenu, onChangeLanguage, idioma }) => {
 
     const onClickEvent = (id) => {
         if (MenuAberto) clickNavMobile();
-        onClickNavbar(id);
+        onClickMenu(id);
     };
 
     return (
@@ -34,7 +34,7 @@ const Navegador = ({ itens_navbar, clickNavMobile, MenuAberto, onClickNavbar, on
                         </span>
                     }
 
-                    {itens_navbar.map((item) => (
+                    {itensMenu.map((item) => (
                         <li key={item.index}>
 
                             <NavegadorLink

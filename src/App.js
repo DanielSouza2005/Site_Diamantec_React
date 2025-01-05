@@ -23,7 +23,7 @@ import { BsBriefcaseFill } from "react-icons/bs";
 function App() {
   function Traduzir(idioma) {
     if (idioma === "pt-br") {
-      setNavbarAtivo([
+      setMenu([
         {
           nome: "Início",
           index: 0,
@@ -181,7 +181,7 @@ function App() {
       setTextoDireitos("Todos os Direitos Reservados");
     }
     else if (idioma === "en") {
-      setNavbarAtivo([
+      setMenu([
         {
           nome: "Home",
           index: 0,
@@ -343,7 +343,7 @@ function App() {
   let [idiomaGlobal, setIdiomaGlobal] = useState("pt-br");
   const [empresa] = useState("Diamantec");
 
-  const [navbarAtivo, setNavbarAtivo] = useState([]);
+  const [menu, setMenu] = useState([]);
   const [menuAberto, dispatcherMenuAberto] = useReducer(ReducerMostraNavegador, false);
 
   const [bannerTitulo, setBannerTitulo] = useState("");
@@ -373,8 +373,8 @@ function App() {
     Traduzir(idiomaGlobal);
   }, [idiomaGlobal]);
 
-  const aoAtivarItemNavbar = (id) => {
-    setNavbarAtivo(navbarAtivo.map(item => {
+  const aoAtivarItemMenu = (id) => {
+    setMenu(menu.map(item => {
       item.active = false;
 
       if (item.index === id) {
@@ -408,10 +408,10 @@ function App() {
   return (
     <div className="App">
       <Cabecalho
-        itens_navbar={navbarAtivo}
+        itensMenu={menu}
         mostraMenu={aoMostrarMenu}
         MenuAberto={menuAberto}
-        onClickNavbar={aoAtivarItemNavbar}
+        onClickMenu={aoAtivarItemMenu}
         onChangeLanguage={aoTrocarIdioma}
         idioma={idiomaGlobal}
       />

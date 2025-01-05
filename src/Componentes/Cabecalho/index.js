@@ -1,5 +1,5 @@
 import Navegador from '../Navegador';
-import logo from '../../Imagens/logo.png';
+import logo from '../../Imagens/cabecalho/logo.png';
 import styles from "./cabecalho.module.css";
 
 const Cabecalho = (props) => {

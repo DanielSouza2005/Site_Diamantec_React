@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useReducer } from 'react';
 
 import Cabecalho from './Componentes/Cabecalho';
 import Banner from './Componentes/Banner';
@@ -7,13 +7,17 @@ import Servicos from './Componentes/Servicos';
 import Rodape from './Componentes/Rodape';
 import SobreNos from './Componentes/SobreNos';
 import Portfolio from './Componentes/Portfolio';
+import Time from './Componentes/Time';
+
+import ReducerMostraNavegador, { MOSTRAR_MENU } from "./Reducer/MostraNavegador";
+import ReducerLightBox, { MOSTRAR_LIGHTBOX } from "./Reducer/LightBox";
+
+import portfolioImages from "./Imagens/portfolio";
 
 import { IoIosCamera } from "react-icons/io";
 import { FaComputer } from "react-icons/fa6";
 import { IoCodeSlash } from "react-icons/io5";
 import { BsBriefcaseFill } from "react-icons/bs";
-
-import portfolioImages from "./Imagens/portfolio";
 
 function App() {
   function Traduzir(idioma) {
@@ -139,6 +143,38 @@ function App() {
           nome: "Pinguinhos",
           area: "Cookie Shop"
         }
+      ]);
+
+      setTimeTitulo("Nosso Time");
+      setTime([
+        {
+          id: 0,
+          imagem: "",
+          alt: "",
+          nome: "",
+          cargo: "Designer Gráfica"
+        },
+        {
+          id: 1,
+          imagem: "",
+          alt: "",
+          nome: "",
+          cargo: "Desenvolvedor Front-End"
+        },
+        {
+          id: 2,
+          imagem: "",
+          alt: "",
+          nome: "",
+          cargo: "Desenvolvedor Back-End"
+        },
+        {
+          id: 3,
+          imagem: "",
+          alt: "",
+          nome: "",
+          cargo: "Diretora Administrativa"
+        },
       ]);
 
       setTextoDireitos("Todos os Direitos Reservados");
@@ -267,6 +303,38 @@ function App() {
         }
       ]);
 
+      setTimeTitulo("Our Team");
+      setTime([
+        {
+          id: 0,
+          imagem: "",
+          alt: "",
+          nome: "",
+          cargo: "Graphic Designer"
+        },
+        {
+          id: 1,
+          imagem: "",
+          alt: "",
+          nome: "",
+          cargo: "Front End Developer"
+        },
+        {
+          id: 2,
+          imagem: "",
+          alt: "",
+          nome: "",
+          cargo: "Back End Developer"
+        },
+        {
+          id: 3,
+          imagem: "",
+          alt: "",
+          nome: "",
+          cargo: "Administrative Director"
+        },
+      ]);
+
       setTextoDireitos("All Rights Reserved");
     }
   }
@@ -275,7 +343,7 @@ function App() {
   const [empresa] = useState("Diamantec");
 
   const [navbarAtivo, setNavbarAtivo] = useState([]);
-  const [menuAberto, setMenuAberto] = useState(false);
+  const [menuAberto, dispatcherMenuAberto] = useReducer(ReducerMostraNavegador, false);
 
   const [bannerTitulo, setBannerTitulo] = useState("");
   const [bannerSubTitulo, setBannerSubTitulo] = useState("");
@@ -290,10 +358,13 @@ function App() {
 
   const [portfolioTitulo, setPortfolioTitulo] = useState("");
   const [portfolioItens, setPortfolioItens] = useState([]);
-  const [lightboxController, setLightboxController] = useState({
+  const [lightboxController, dispatcherLightboxController] = useReducer(ReducerLightBox, {
     toggler: false,
     slide: 1
   });
+
+  const [timeTitulo, setTimeTitulo] = useState("");
+  const [time, setTime] = useState([]);
 
   const [textoDireitos, setTextoDireitos] = useState("");
 
@@ -314,8 +385,17 @@ function App() {
   };
 
   const aoMostrarMenu = () => {
-    setMenuAberto(!menuAberto);
+    dispatcherMenuAberto({
+      tipo: MOSTRAR_MENU
+    });
   };
+
+  const aoMostrarLightBox = (numero) => {
+    dispatcherLightboxController({
+      tipo: MOSTRAR_LIGHTBOX,
+      slide: numero
+    });
+  }
 
   const aoTrocarIdioma = () => {
     setIdiomaGlobal(() => {
@@ -323,13 +403,6 @@ function App() {
       if (idiomaGlobal === "en") return "pt-br";
     });
   };
-
-  const aoMostrarLightBox = (numero) => {
-		setLightboxController({
-			toggler: !lightboxController.toggler,
-			slide: numero
-		});    
-	}
 
   return (
     <div className="App">
@@ -366,6 +439,11 @@ function App() {
         slide={lightboxController.slide}
         aoMostrarPortfolioLightBox={aoMostrarLightBox}
         sourceLightBox={Object.values(portfolioImages)}
+      />
+
+      <Time
+        titulo={timeTitulo}
+        time={time}
       />
 
       <Rodape

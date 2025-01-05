@@ -1,5 +1,5 @@
 import styles from "./SobreNos.module.css";
-import sobreNosImagem from "../../Imagens/sobre.jpg";
+import sobreNosImagem from "../../Imagens/sobre/sobre.jpg";
 
 const SobreNos = ({ titulo, alt, textos }) => {
     return (

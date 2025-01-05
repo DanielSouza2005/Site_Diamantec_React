@@ -1,6 +1,6 @@
 import styles from "./botaoidioma.module.css";
-import ingles from "../../Imagens/ingles.png";
-import pt_br from "../../Imagens/pt-br.png";
+import ingles from "../../Imagens/cabecalho/ingles.png";
+import pt_br from "../../Imagens/cabecalho/pt-br.png";
 
 const BotaoIdioma = ({ alt, idioma, onChangeLanguage }) => {
     let imagem = "";

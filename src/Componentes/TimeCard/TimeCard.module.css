@@ -1,0 +1,17 @@
+.timeCard {
+    align-items: stretch !important;
+    display: flex !important;
+}
+
+@media (min-width: 992px) {
+    .timeCard {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+}
+@media (min-width: 768px) {
+    .timeCard {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}

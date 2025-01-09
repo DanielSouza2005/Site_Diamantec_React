@@ -88,4 +88,5 @@
 
 .social a:hover {
     background: #ff2e8f;
+    cursor: pointer;
 }

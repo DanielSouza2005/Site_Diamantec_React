@@ -8,7 +8,6 @@ const NavegadorLink = ({ onClick, item }) => {
             to={item.href}
             spy={true}
             smooth={true}
-            offset={-20}
             duration={750}
             className={styles.cabecalhoNavBarLink}
             onClick={() => onClick(item.id)}

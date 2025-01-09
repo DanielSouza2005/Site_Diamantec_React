@@ -1,28 +1,35 @@
 import Navegador from '../Navegador';
 import logo from '../../Imagens/cabecalho/logo.png';
 import styles from "./cabecalho.module.css";
+import { Link } from 'react-scroll';
 
 const Cabecalho = (props) => {
-    return(
-        <header id="cabecalho"
-                className={styles.cabecalho}>
+    return (
+        <header
+            id="cabecalho"
+            className={styles.cabecalho}
+        >
             <div className={styles.cabecalhoContainer}>
-                <a className={styles.cabecalhoLogo}
-                   href="#banner"
-                > 
+                <Link
+                    className={styles.cabecalhoLogo}
+                    spy={true}
+                    smooth={true}
+                    duration={750}
+                    to="banner"
+                >
                     <img alt="Diamantec"
-                         src={logo} 
+                        src={logo}
                     />
-                </a>
-                
-                <Navegador 
+                </Link>
+
+                <Navegador
                     itensMenu={props.itensMenu}
                     clickNavMobile={props.mostraMenu}
                     MenuAberto={props.MenuAberto}
                     onClickMenu={props.onClickMenu}
                     onChangeLanguage={props.onChangeLanguage}
                     idioma={props.idioma}
-                />   
+                />
             </div>
         </header>
     );

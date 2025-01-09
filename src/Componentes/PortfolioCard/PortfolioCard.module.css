@@ -63,6 +63,6 @@
     padding: 10px;
 }
 
-.portfolioConteudoCardInfoSection:hover a {
+.portfolioConteudoCardInfoSection:hover svg {
     cursor: pointer;
 }

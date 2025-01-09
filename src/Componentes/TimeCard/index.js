@@ -1,8 +1,8 @@
 import styles from "./TimeCard.module.css";
+import { Link } from "react-scroll";
 
 import { FaInstagram } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io5";
-
 
 const TimeCard = ({ id, imagem, alt, nome, cargo }) => {
     return (
@@ -14,12 +14,22 @@ const TimeCard = ({ id, imagem, alt, nome, cargo }) => {
                         alt={alt}
                     />
                     <div className={styles.social}>
-                        <a href="#time">
-                            <FaInstagram size={22}/>
-                        </a>
-                        <a href="#time">
+                        <Link
+                            to="time"
+                            spy={true}
+                            smooth={true}
+                            duration={750}
+                        >
+                            <FaInstagram size={22} />
+                        </Link>
+                        <Link
+                            to="time"
+                            spy={true}
+                            smooth={true}
+                            duration={750}
+                        >
                             <IoLogoLinkedin size={22} />
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className={styles.timeCardConteudoInfo}>

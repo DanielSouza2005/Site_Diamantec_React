@@ -13,7 +13,8 @@ const BotaoIdioma = ({ alt, idioma, onChangeLanguage }) => {
             className={styles.botaoIngles}
             onClick={() => onChangeLanguage()}
         >
-            <img alt={alt}
+            <img 
+                alt={alt}
                 src={imagem}
             />
         </a>

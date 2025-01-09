@@ -21,6 +21,7 @@
     transition: 0.1s linear;
     position: relative;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .cabecalhoNavbar a::after {

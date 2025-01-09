@@ -19,6 +19,7 @@ import { IoIosCamera } from "react-icons/io";
 import { FaComputer } from "react-icons/fa6";
 import { IoCodeSlash } from "react-icons/io5";
 import { BsBriefcaseFill } from "react-icons/bs";
+import ScrollTopo from './Componentes/ScrollTopo';
 
 function App() {
   function Traduzir(idioma) {
@@ -27,38 +28,32 @@ function App() {
         {
           nome: "Início",
           index: 0,
-          active: true,
-          href: "#banner"
+          href: "banner"
         },
         {
           nome: "Serviços",
           index: 1,
-          active: false,
-          href: "#servicos"
+          href: "servicos"
         },
         {
           nome: "Sobre",
           index: 2,
-          active: false,
-          href: "#sobre"
+          href: "sobre"
         },
         {
           nome: "Portfólio",
           index: 3,
-          active: false,
-          href: "#portfolio"
+          href: "portfolio"
         },
         {
           nome: "Time",
           index: 4,
-          active: false,
-          href: "#time"
+          href: "time"
         },
         {
           nome: "Contato",
           index: 5,
-          active: false,
-          href: "#contato"
+          href: "contato"
         }]);
 
       setServicosItens([
@@ -185,38 +180,32 @@ function App() {
         {
           nome: "Home",
           index: 0,
-          active: true,
-          href: "#banner"
+          href: "banner"
         },
         {
           nome: "Services ",
           index: 1,
-          active: false,
-          href: "#servicos"
+          href: "servicos"
         },
         {
           nome: "About Us",
           index: 2,
-          active: false,
-          href: "#sobre"
+          href: "sobre"
         },
         {
           nome: "Portfolio",
           index: 3,
-          active: false,
-          href: "#portfolio"
+          href: "portfolio"
         },
         {
           nome: "Team",
           index: 4,
-          active: false,
-          href: "#time"
+          href: "time"
         },
         {
           nome: "Contact",
           index: 5,
-          active: false,
-          href: "#contato"
+          href: "contato"
         }]);
 
       setServicosItens([
@@ -373,18 +362,6 @@ function App() {
     Traduzir(idiomaGlobal);
   }, [idiomaGlobal]);
 
-  const aoAtivarItemMenu = (id) => {
-    setMenu(menu.map(item => {
-      item.active = false;
-
-      if (item.index === id) {
-        item.active = true;
-      }
-
-      return item;
-    }));
-  };
-
   const aoMostrarMenu = () => {
     dispatcherMenuAberto({
       tipo: MOSTRAR_MENU
@@ -411,7 +388,6 @@ function App() {
         itensMenu={menu}
         mostraMenu={aoMostrarMenu}
         MenuAberto={menuAberto}
-        onClickMenu={aoAtivarItemMenu}
         onChangeLanguage={aoTrocarIdioma}
         idioma={idiomaGlobal}
       />
@@ -451,6 +427,8 @@ function App() {
         empresa={empresa}
         textoDireitos={textoDireitos}
       />
+
+      <ScrollTopo />
     </div >
   );
 }

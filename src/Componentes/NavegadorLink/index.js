@@ -1,16 +1,20 @@
 import styles from "./navegadorlink.module.css";
+import { Link } from 'react-scroll';
 
-const NavegadorLink = ({ href, ativo, nome, onClick, id }) => {
+const NavegadorLink = ({ onClick, item }) => {
     return (
-        <a
-            href={href}
-            className={`${styles.cabecalhoItens}
-                        ${ativo ? styles.cabecalhoNavbarLinkAtivo : ""}
-                       `}
-            onClick={() => onClick(id)}
+        <Link
+            activeClass={styles.cabecalhoNavbarLinkAtivo}
+            to={item.href}
+            spy={true}
+            smooth={true}
+            offset={-20}
+            duration={750}
+            className={styles.cabecalhoNavBarLink}
+            onClick={() => onClick(item.id)}
         >
-            {nome}
-        </a>
+            {item.nome}
+        </Link>
     );
 }
 

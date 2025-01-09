@@ -1,22 +1,30 @@
+import { Link } from "react-scroll";
 import styles from "./banner.module.css";
 
 const Banner = (props) => {
-    return(
-        <section id="banner"
-                 className={styles.banner}>
-           <div className={styles.bannerContainer}>
+    return (
+        <section
+            id="banner"
+            className={styles.banner}
+        >
+            <div className={styles.bannerContainer}>
                 <h1>
                     <span>
-                       {props.titulo} 
+                        {props.titulo}
                     </span>
                 </h1>
                 <h2>{props.subTitulo}</h2>
                 <div className={styles.btnSaibamais}>
-                    <a href="#servicos">
+                    <Link
+                        to="servicos"
+                        spy={true}
+                        smooth={true}
+                        offset={-20}
+                        duration={750}>
                         {props.botaoSaibaMais}
-                    </a>
+                    </Link>
                 </div>
-           </div>
+            </div>
         </section>
     );
 }

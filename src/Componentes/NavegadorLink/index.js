@@ -8,10 +8,6 @@ const NavegadorLink = ({ onClick, item }) => {
             to={item.href}
             spy={true}
             smooth={true}
-<<<<<<< HEAD
-=======
-            offset={-20}
->>>>>>> 992181d (      <ScrollTopo />)
             duration={750}
             className={styles.cabecalhoNavBarLink}
             onClick={() => onClick(item.id)}

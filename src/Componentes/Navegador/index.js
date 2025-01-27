@@ -1,7 +1,7 @@
 import { HiOutlineViewList } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import BotaoIdioma from "../BotaoIdioma";
-import NavegadorLink from "../NavegadorLink";
+import NavegadorLink from "./NavegadorLink";
 import styles from "./navegador.module.css";
 
 const Navegador = ({ itensMenu, clickNavMobile, MenuAberto, onChangeLanguage, idioma }) => {

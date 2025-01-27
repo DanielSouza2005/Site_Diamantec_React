@@ -1,4 +1,4 @@
-import TimeCard from "../TimeCard";
+import TimeCard from "./TimeCard";
 import styles from "./Time.module.css";
 
 const Time = ({ titulo, time }) => {

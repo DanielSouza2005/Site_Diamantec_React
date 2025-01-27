@@ -20,6 +20,7 @@ import { FaComputer } from "react-icons/fa6";
 import { IoCodeSlash } from "react-icons/io5";
 import { BsBriefcaseFill } from "react-icons/bs";
 import ScrollTopo from './Componentes/ScrollTopo';
+import Contato from './Componentes/Contato';
 
 function App() {
   function Traduzir(idioma) {
@@ -173,6 +174,11 @@ function App() {
         },
       ]);
 
+      setContatoTitulo("Fale Conosco!");
+      setContatoEndereco({ titulo: "Endereço", conteudo: "Av. Brasil Sul, 2000 - Parque Res. Nardini, Americana - SP" });
+      setContatoInstagram({ titulo: "Instagram", conteudo: "@diamantec_tec" });
+      setContatoLinktree({ titulo: "Linktree", conteudo: "linktr.ee/diamantec_" });
+
       setTextoDireitos("Todos os Direitos Reservados");
     }
     else if (idioma === "en") {
@@ -325,6 +331,11 @@ function App() {
         },
       ]);
 
+      setContatoTitulo("Contact Us!");
+      setContatoEndereco({ titulo: "Address", conteudo: "2000 Av. Brasil Sul - Parque Residencial Nardini, Americana, São Paulo, Brazil" });
+      setContatoInstagram({ titulo: "Instagram", conteudo: "@diamantec_tec" });
+      setContatoLinktree({ titulo: "Linktree", conteudo: "linktr.ee/diamantec_" });
+
       setTextoDireitos("All Rights Reserved");
     }
   }
@@ -355,6 +366,11 @@ function App() {
 
   const [timeTitulo, setTimeTitulo] = useState("");
   const [time, setTime] = useState([]);
+
+  const [contatoTitulo, setContatoTitulo] = useState("");
+  const [contatoEndereco, setContatoEndereco] = useState({});
+  const [contatoInstagram, setContatoInstagram] = useState({});
+  const [contatoLinktree, setContatoLinktree] = useState({});
 
   const [textoDireitos, setTextoDireitos] = useState("");
 
@@ -421,6 +437,13 @@ function App() {
       <Time
         titulo={timeTitulo}
         time={time}
+      />
+
+      <Contato 
+        titulo={contatoTitulo}
+        endereco={contatoEndereco}
+        instagram={contatoInstagram}
+        linktree={contatoLinktree}
       />
 
       <Rodape

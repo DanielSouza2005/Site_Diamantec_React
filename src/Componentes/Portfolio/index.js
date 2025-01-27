@@ -1,5 +1,5 @@
 import FsLightbox from "fslightbox-react";
-import PortfolioCard from "../PortfolioCard";
+import PortfolioCard from "./PortfolioCard";
 import styles from "./Portfolio.module.css";
 
 const Portfolio = ({ titulo, itens, slide, toggler, aoMostrarPortfolioLightBox, sourceLightBox }) => {

@@ -1,4 +1,4 @@
-import ServicosCard from "../ServicosCard";
+import ServicosCard from "./ServicosCard";
 import styles from "./servicos.module.css";
 
 const Servicos = ({ itens, titulo }) => {

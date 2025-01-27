@@ -6,6 +6,7 @@ body {
   -moz-osx-font-smoothing: grayscale;  
   line-height: 1.5;
   scroll-behavior: smooth;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 code {

@@ -1,0 +1,44 @@
+.contato {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.contatoContainer {
+    width: 100%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 992px) {
+    .contatoContainer {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contatoContainer {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contatoContainer {
+        max-width: 540px;
+    }
+}
+
+.contatoTitulo {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.contatoTitulo h3 {
+    margin: 15px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #4128FF;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.2;
+}

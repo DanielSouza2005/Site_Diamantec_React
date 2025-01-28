@@ -2,7 +2,9 @@ import styles from "./Contato.module.css";
 import ContatoForm from "./ContatoForm";
 import ContatoInfo from "./ContatoInfo";
 
-const Contato = ({ titulo, endereco, instagram, linktree }) => {
+const Contato = ({ titulo, 
+                   endereco, instagram, linktree, 
+                   inputNome, inputEmail, inputAssunto, inputMensagem, inputBotao }) => {
     return (
         <section
             id="contato"
@@ -19,7 +21,13 @@ const Contato = ({ titulo, endereco, instagram, linktree }) => {
                     linktree={linktree}
                 />
 
-                <ContatoForm />
+                <ContatoForm 
+                    inputNome={inputNome}
+                    inputEmail={inputEmail}
+                    inputAssunto={inputAssunto}
+                    inputMensagem={inputMensagem}
+                    inputBotao={inputBotao}
+                />
             </div>
         </section>
     );

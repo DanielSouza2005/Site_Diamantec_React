@@ -178,6 +178,11 @@ function App() {
       setContatoEndereco({ titulo: "Endereço", conteudo: "Av. Brasil Sul, 2000 - Parque Res. Nardini, Americana - SP" });
       setContatoInstagram({ titulo: "Instagram", conteudo: "@diamantec_tec" });
       setContatoLinktree({ titulo: "Linktree", conteudo: "linktr.ee/diamantec_" });
+      setContatoFormNome("Nome");
+      setContatoFormEmail("Email");
+      setContatoFormAssunto("Assunto");
+      setContatoFormMensagem("Mensagem");
+      setContatoFormBotao("Mande sua Mensagem");
 
       setTextoDireitos("Todos os Direitos Reservados");
     }
@@ -335,6 +340,11 @@ function App() {
       setContatoEndereco({ titulo: "Address", conteudo: "2000 Av. Brasil Sul - Parque Residencial Nardini, Americana, São Paulo, Brazil" });
       setContatoInstagram({ titulo: "Instagram", conteudo: "@diamantec_tec" });
       setContatoLinktree({ titulo: "Linktree", conteudo: "linktr.ee/diamantec_" });
+      setContatoFormNome("Your Name");
+      setContatoFormEmail("Your Email");
+      setContatoFormAssunto("Subject");
+      setContatoFormMensagem("Message");
+      setContatoFormBotao("Send Message");
 
       setTextoDireitos("All Rights Reserved");
     }
@@ -371,6 +381,11 @@ function App() {
   const [contatoEndereco, setContatoEndereco] = useState({});
   const [contatoInstagram, setContatoInstagram] = useState({});
   const [contatoLinktree, setContatoLinktree] = useState({});
+  const [contatoFormNome, setContatoFormNome] = useState("");
+  const [contatoFormEmail, setContatoFormEmail] = useState("");
+  const [contatoFormAssunto, setContatoFormAssunto] = useState("");
+  const [contatoFormMensagem, setContatoFormMensagem] = useState("");
+  const [contatoFormBotao, setContatoFormBotao] = useState("");
 
   const [textoDireitos, setTextoDireitos] = useState("");
 
@@ -441,9 +456,16 @@ function App() {
 
       <Contato 
         titulo={contatoTitulo}
+        
         endereco={contatoEndereco}
         instagram={contatoInstagram}
         linktree={contatoLinktree}
+
+        inputNome={contatoFormNome}
+        inputEmail={contatoFormEmail}
+        inputAssunto={contatoFormAssunto}
+        inputMensagem={contatoFormMensagem}
+        inputBotao={contatoFormBotao}
       />
 
       <Rodape

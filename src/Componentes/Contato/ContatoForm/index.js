@@ -3,7 +3,7 @@ import Campo from "../../Campo";
 import Memo from "../../Memo";
 import styles from "./ContatoForm.module.css";
 
-const ContatoForm = () => {
+const ContatoForm = ({ inputNome, inputEmail, inputAssunto, inputMensagem, inputBotao }) => {
     return (
         <div className={styles.contatoBottom}>
             <div className={styles.contatoMapa}>
@@ -25,7 +25,7 @@ const ContatoForm = () => {
                                 tipo="text"
                                 nome="nome"
                                 id="contatoNome"
-                                placeholder="Nome"
+                                placeholder={inputNome}
                                 obrigatorio={true}
                             >
                             </Campo>
@@ -36,7 +36,7 @@ const ContatoForm = () => {
                                 tipo="text"
                                 nome="email"
                                 id="contatoEmail"
-                                placeholder="Email"
+                                placeholder={inputEmail}
                                 obrigatorio={true}
                             >
                             </Campo>
@@ -47,7 +47,7 @@ const ContatoForm = () => {
                             tipo="text"
                             nome="assunto"
                             id="contatoAssunto"
-                            placeholder="Assunto"
+                            placeholder={inputAssunto}
                             obrigatorio={true}
                         >
                         </Campo>
@@ -57,7 +57,7 @@ const ContatoForm = () => {
                             nome="Mensagem"
                             id="contatoMensagem"
                             linhas="5"
-                            placeholder="Mensagem"
+                            placeholder={inputMensagem}
                             obrigatorio={true}
                         />
                     </div>
@@ -70,7 +70,7 @@ const ContatoForm = () => {
                     </div> */}
                     <div className={styles.contatoBotaoBox}>
                         <Botao>
-                            Mande sua mensagem
+                            {inputBotao}
                         </Botao>
                     </div>
                 </form>

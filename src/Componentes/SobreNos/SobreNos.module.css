@@ -80,7 +80,7 @@
     padding-right: calc(var(--bs-gutter-x)* .5);
     padding-left: calc(var(--bs-gutter-x)* .5);
     margin-top: var(--bs-gutter-y);
-    text-align: justify;
+    text-align: left;
     text-justify: inter-word;
     justify-content: center !important;
     flex-direction: column !important;

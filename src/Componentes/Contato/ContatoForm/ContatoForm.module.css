@@ -67,6 +67,12 @@
     margin-left: calc(-.5* var(--bs-gutter-x));
 }
 
+@media (max-width: 992px) {
+    .contatoRow {
+        flex-direction: column; 
+    }
+}
+
 .contatoFormGroup {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;

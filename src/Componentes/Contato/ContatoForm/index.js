@@ -6,10 +6,13 @@ import { useContatoForm } from "../../../Hooks/ContatoForm";
 
 const ContatoForm = ({ inputNome, inputAssunto, inputMensagem, inputBotao }) => {
 
-    const { nomeContatoForm, setNomeContatoForm,
-            assuntoContatoForm, setAssuntoContatoForm,
-            mensagemContatoForm, setMensagemContatoForm,
-            aoEnviarEmailContatoForm } = useContatoForm();
+    const {
+        nomeContatoForm, setNomeContatoForm,
+        assuntoContatoForm, setAssuntoContatoForm,
+        mensagemContatoForm, setMensagemContatoForm,
+        carregandoContatoForm, erroContatoForm, envioSucesso,
+        aoEnviarEmailContatoForm
+    } = useContatoForm();
 
     const aoEnviarEmail = (evento) => {
         evento.preventDefault();
@@ -33,8 +36,6 @@ const ContatoForm = ({ inputNome, inputAssunto, inputMensagem, inputBotao }) => 
             <div className={styles.contatoForm}>
                 <form
                     onSubmit={(evento) => aoEnviarEmail(evento)}
-                // method="post"
-                // action="forms/contact.php"
                 >
                     <div className={styles.contatoRow}>
                         <div className={`${styles.contatoColuna} 
@@ -74,6 +75,24 @@ const ContatoForm = ({ inputNome, inputAssunto, inputMensagem, inputBotao }) => 
                             onChange={valor => { setMensagemContatoForm(valor) }}
                         />
                     </div>
+
+                    <div className={styles.statusEnvioEmail}>
+                        {
+                            carregandoContatoForm &&
+                            <div className={styles.carregando}>Carregando...</div>
+                        }
+
+                        {
+                            !carregandoContatoForm && erroContatoForm && (
+                            <div className={styles.erroMensagem}>Não foi possível realizar o envio do email. Tente novamente mais tarde.</div>
+                        )}
+
+                        {
+                            !carregandoContatoForm && envioSucesso && (
+                            <div className={styles.mensagemEnviada}>Sua mensagem foi enviada. Obrigado!</div>
+                        )}
+                    </div>
+
                     <div className={styles.contatoBotaoBox}>
                         <Botao
                             tipo="submit"

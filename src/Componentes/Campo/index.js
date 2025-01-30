@@ -1,6 +1,11 @@
 import styles from "./Campo.module.css";
 
-const Campo = ({ children, tipo, nome, id, placeholder, obrigatorio }) => {
+const Campo = ({ children, tipo, nome, id, placeholder, obrigatorio, valor, onChange }) => {
+    
+    const aoDigitarInput = (evento) => {
+        onChange(evento.target.value);
+    }
+
     return (
         <input
             type={tipo}
@@ -9,6 +14,8 @@ const Campo = ({ children, tipo, nome, id, placeholder, obrigatorio }) => {
             placeholder={placeholder}
             required={obrigatorio}
             className={styles.CampoInput}
+            value={valor}
+            onChange={aoDigitarInput}
         >
             {children}
         </input>

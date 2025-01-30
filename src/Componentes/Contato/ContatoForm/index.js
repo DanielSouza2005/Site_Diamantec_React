@@ -2,8 +2,25 @@ import Botao from "../../Botao";
 import Campo from "../../Campo";
 import Memo from "../../Memo";
 import styles from "./ContatoForm.module.css";
+import { useContatoForm } from "../../../Hooks/ContatoForm";
 
-const ContatoForm = ({ inputNome, inputEmail, inputAssunto, inputMensagem, inputBotao }) => {
+const ContatoForm = ({ inputNome, inputAssunto, inputMensagem, inputBotao }) => {
+
+    const { nomeContatoForm, setNomeContatoForm,
+            assuntoContatoForm, setAssuntoContatoForm,
+            mensagemContatoForm, setMensagemContatoForm,
+            aoEnviarEmailContatoForm } = useContatoForm();
+
+    const aoEnviarEmail = (evento) => {
+        evento.preventDefault();
+
+        aoEnviarEmailContatoForm();
+
+        setNomeContatoForm("");
+        setAssuntoContatoForm("");
+        setMensagemContatoForm("");
+    }
+
     return (
         <div className={styles.contatoBottom}>
             <div className={styles.contatoMapa}>
@@ -15,6 +32,7 @@ const ContatoForm = ({ inputNome, inputEmail, inputAssunto, inputMensagem, input
             </div>
             <div className={styles.contatoForm}>
                 <form
+                    onSubmit={(evento) => aoEnviarEmail(evento)}
                 // method="post"
                 // action="forms/contact.php"
                 >
@@ -27,17 +45,8 @@ const ContatoForm = ({ inputNome, inputEmail, inputAssunto, inputMensagem, input
                                 id="contatoNome"
                                 placeholder={inputNome}
                                 obrigatorio={true}
-                            >
-                            </Campo>
-                        </div>
-                        <div className={`${styles.contatoColuna} 
-                                         ${styles.contatoFormGroup}`}>
-                            <Campo
-                                tipo="text"
-                                nome="email"
-                                id="contatoEmail"
-                                placeholder={inputEmail}
-                                obrigatorio={true}
+                                valor={nomeContatoForm}
+                                onChange={valor => { setNomeContatoForm(valor) }}
                             >
                             </Campo>
                         </div>
@@ -49,6 +58,8 @@ const ContatoForm = ({ inputNome, inputEmail, inputAssunto, inputMensagem, input
                             id="contatoAssunto"
                             placeholder={inputAssunto}
                             obrigatorio={true}
+                            valor={assuntoContatoForm}
+                            onChange={valor => { setAssuntoContatoForm(valor) }}
                         >
                         </Campo>
                     </div>
@@ -59,17 +70,14 @@ const ContatoForm = ({ inputNome, inputEmail, inputAssunto, inputMensagem, input
                             linhas="5"
                             placeholder={inputMensagem}
                             obrigatorio={true}
+                            valor={mensagemContatoForm}
+                            onChange={valor => { setMensagemContatoForm(valor) }}
                         />
                     </div>
-
-                    {/* carregando */}
-                    {/* <div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div> */}
                     <div className={styles.contatoBotaoBox}>
-                        <Botao>
+                        <Botao
+                            tipo="submit"
+                        >
                             {inputBotao}
                         </Botao>
                     </div>

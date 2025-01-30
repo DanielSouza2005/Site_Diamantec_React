@@ -1,8 +1,11 @@
 import styles from "./Botao.module.css";
 
-const Botao = ({ children }) => {
+const Botao = ({ children, tipo }) => {
     return (
-        <button className={styles.botao}>
+        <button
+            className={styles.botao}
+            type={tipo}
+        >
             {children}
         </button>
     );

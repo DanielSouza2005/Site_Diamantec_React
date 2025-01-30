@@ -179,7 +179,6 @@ function App() {
       setContatoInstagram({ titulo: "Instagram", conteudo: "@diamantec_tec" });
       setContatoLinktree({ titulo: "Linktree", conteudo: "linktr.ee/diamantec_" });
       setContatoFormNome("Nome");
-      setContatoFormEmail("Email");
       setContatoFormAssunto("Assunto");
       setContatoFormMensagem("Mensagem");
       setContatoFormBotao("Mande sua Mensagem");
@@ -341,7 +340,7 @@ function App() {
       setContatoInstagram({ titulo: "Instagram", conteudo: "@diamantec_tec" });
       setContatoLinktree({ titulo: "Linktree", conteudo: "linktr.ee/diamantec_" });
       setContatoFormNome("Your Name");
-      setContatoFormEmail("Your Email");
+      
       setContatoFormAssunto("Subject");
       setContatoFormMensagem("Message");
       setContatoFormBotao("Send Message");
@@ -382,7 +381,6 @@ function App() {
   const [contatoInstagram, setContatoInstagram] = useState({});
   const [contatoLinktree, setContatoLinktree] = useState({});
   const [contatoFormNome, setContatoFormNome] = useState("");
-  const [contatoFormEmail, setContatoFormEmail] = useState("");
   const [contatoFormAssunto, setContatoFormAssunto] = useState("");
   const [contatoFormMensagem, setContatoFormMensagem] = useState("");
   const [contatoFormBotao, setContatoFormBotao] = useState("");
@@ -462,7 +460,6 @@ function App() {
         linktree={contatoLinktree}
 
         inputNome={contatoFormNome}
-        inputEmail={contatoFormEmail}
         inputAssunto={contatoFormAssunto}
         inputMensagem={contatoFormMensagem}
         inputBotao={contatoFormBotao}

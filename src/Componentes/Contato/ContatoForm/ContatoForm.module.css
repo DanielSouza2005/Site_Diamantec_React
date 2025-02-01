@@ -102,20 +102,19 @@
 
 .statusEnvioEmail {
     margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
 }
 
 .carregando {
     background: #9ef4ff;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
 }
 
 .erroMensagem {
     color: #fff;
     background: #ff2828;
     text-align: left;
-    padding: 15px;
+    padding: 10px;
     font-weight: 600;
 }
 
@@ -123,6 +122,6 @@
     color: #fff;
     background: #12db58;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     font-weight: 600;
 }

@@ -27,8 +27,6 @@ const Cabecalho = (props) => {
                     clickNavMobile={props.mostraMenu}
                     MenuAberto={props.MenuAberto}
                     onClickMenu={props.onClickMenu}
-                    onChangeLanguage={props.onChangeLanguage}
-                    idioma={props.idioma}
                 />
             </div>
         </header>

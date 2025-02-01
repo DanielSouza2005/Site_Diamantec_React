@@ -2,7 +2,7 @@ import Botao from "../../Botao";
 import Campo from "../../Campo";
 import Memo from "../../Memo";
 import styles from "./ContatoForm.module.css";
-import { useContatoForm } from "../../../Hooks/ContatoForm";
+import { useContatoForm } from "../../../Hooks/Contato";
 
 const ContatoForm = ({ inputNome, inputAssunto, inputMensagem, inputBotao, statusEmailForm }) => {
 
@@ -94,7 +94,7 @@ const ContatoForm = ({ inputNome, inputAssunto, inputMensagem, inputBotao, statu
                     </div>
 
                     {
-                        !carregandoContatoForm && !envioSucesso && !erroContatoForm &&
+                        !carregandoContatoForm && !envioSucesso &&
                         <div className={styles.contatoBotaoBox}>
                             <Botao
                                 tipo="submit"

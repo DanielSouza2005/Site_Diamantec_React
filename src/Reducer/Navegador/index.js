@@ -1,6 +1,6 @@
 export const MOSTRAR_MENU = "MOSTRAR_MENU";
 
-const ReducerMostraNavegador = (estado, acao) => {
+const ReducerNavegador = (estado, acao) => {
     switch (acao.tipo) {
         case MOSTRAR_MENU:
             return !estado;
@@ -10,4 +10,4 @@ const ReducerMostraNavegador = (estado, acao) => {
     };
 };
 
-export default ReducerMostraNavegador;
+export default ReducerNavegador;

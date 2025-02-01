@@ -6,12 +6,12 @@ const BotaoIdioma = ({ alt, idioma, onChangeLanguage }) => {
     let imagem = "";
 
     if (idioma === "pt-br") imagem = ingles;
-    if (idioma === "en") imagem = pt_br;
+    if (idioma === "en-us") imagem = pt_br;
 
     return (
         <a
             className={styles.botaoIngles}
-            onClick={() => onChangeLanguage()}
+            onClick={() => onChangeLanguage(idioma)}
         >
             <img 
                 alt={alt}

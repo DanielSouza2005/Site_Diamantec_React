@@ -3,8 +3,11 @@ import { AiOutlineClose } from "react-icons/ai";
 import BotaoIdioma from "../BotaoIdioma";
 import NavegadorLink from "./NavegadorLink";
 import styles from "./navegador.module.css";
+import { useTraducao } from "../../Hooks/Traducao";
 
-const Navegador = ({ itensMenu, clickNavMobile, MenuAberto, onChangeLanguage, idioma }) => {
+const Navegador = ({ itensMenu, clickNavMobile, MenuAberto, onChangeLanguage }) => {
+
+    const { idioma, aoTrocarIdioma } = useTraducao();
 
     const onClickEvento = () => {
         if (MenuAberto) clickNavMobile();
@@ -47,7 +50,7 @@ const Navegador = ({ itensMenu, clickNavMobile, MenuAberto, onChangeLanguage, id
                     <li>
                         <BotaoIdioma
                             alt="Trocar Idioma"
-                            onChangeLanguage={() => onChangeLanguage()}
+                            onChangeLanguage={() => aoTrocarIdioma(idioma)}
                             idioma={idioma}
                         />
                     </li>

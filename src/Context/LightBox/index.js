@@ -1,5 +1,6 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useState } from "react";
 import ReducerLightBox from "../../Reducer/LightBox";
+import portfolioImages from "../../Imagens/portfolio";
 
 export const LightBoxContext = createContext();
 LightBoxContext.displayName = "LightBox";
@@ -11,8 +12,13 @@ export const LightBoxProvider = ({ children }) => {
         slide: 1
     });
 
+    const [portfolio, setPortfolio] = useState(portfolioImages);
+
     return (
-        <LightBoxContext.Provider value={{ lightboxController, dispatcherLightboxController }} >
+        <LightBoxContext.Provider value={{
+            lightboxController, dispatcherLightboxController,
+            portfolio, setPortfolio
+        }} >
             {children}
         </LightBoxContext.Provider>
     )

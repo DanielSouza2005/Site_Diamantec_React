@@ -2,8 +2,14 @@ import Navegador from '../Navegador';
 import logo from '../../Imagens/cabecalho/logo.png';
 import styles from "./cabecalho.module.css";
 import { Link } from 'react-scroll';
+import { useMenu } from '../../Hooks/Menu';
+import { useTraducao } from '../../Hooks/Traducao';
 
-const Cabecalho = (props) => {
+const Cabecalho = () => {
+
+    const { menuAberto, aoMostrarMenu } = useMenu();
+    const { conteudo } = useTraducao();
+
     return (
         <header
             id="cabecalho"
@@ -23,10 +29,9 @@ const Cabecalho = (props) => {
                 </Link>
 
                 <Navegador
-                    itensMenu={props.itensMenu}
-                    clickNavMobile={props.mostraMenu}
-                    MenuAberto={props.MenuAberto}
-                    onClickMenu={props.onClickMenu}
+                    itensMenu={conteudo.menu}
+                    clickNavMobile={aoMostrarMenu}
+                    MenuAberto={menuAberto}
                 />
             </div>
         </header>

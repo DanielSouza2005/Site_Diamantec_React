@@ -1,11 +1,12 @@
+import { useTraducao } from "../../Hooks/Traducao";
 import styles from "./Contato.module.css";
 import ContatoForm from "./ContatoForm";
 import ContatoInfo from "./ContatoInfo";
 
-const Contato = ({ titulo, 
-                   endereco, instagram, linktree, 
-                   inputNome, inputEmail, inputAssunto, inputMensagem, inputBotao,
-                   statusEmailForm }) => {
+const Contato = ({ titulo }) => {
+
+    const { conteudo } = useTraducao();
+
     return (
         <section
             id="contato"
@@ -17,18 +18,17 @@ const Contato = ({ titulo,
                 </div>
 
                 <ContatoInfo
-                    endereco={endereco}
-                    instagram={instagram}
-                    linktree={linktree}
+                    endereco={conteudo.contato.endereco}
+                    instagram={conteudo.contato.redesSociais.instagram}
+                    linktree={conteudo.contato.redesSociais.linktree}
                 />
 
-                <ContatoForm 
-                    inputNome={inputNome}
-                    inputEmail={inputEmail}
-                    inputAssunto={inputAssunto}
-                    inputMensagem={inputMensagem}
-                    inputBotao={inputBotao}
-                    statusEmailForm={statusEmailForm}
+                <ContatoForm
+                    inputNome={conteudo.contato.formInputs.nome}
+                    inputAssunto={conteudo.contato.formInputs.assunto}
+                    inputMensagem={conteudo.contato.formInputs.mensagem}
+                    inputBotao={conteudo.contato.formInputs.botao}
+                    statusEmailForm={conteudo.contato.envioEmailStatus}
                 />
             </div>
         </section>

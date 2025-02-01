@@ -1,8 +1,12 @@
 import FsLightbox from "fslightbox-react";
 import PortfolioCard from "./PortfolioCard";
 import styles from "./Portfolio.module.css";
+import { useLightBox } from "../../Hooks/LightBox";
 
-const Portfolio = ({ titulo, itens, slide, toggler, aoMostrarPortfolioLightBox, sourceLightBox }) => {
+const Portfolio = ({ titulo, itens }) => {
+
+    const { lightboxController, portfolio } = useLightBox();
+
     return (
         <section
             id="portfolio"
@@ -17,20 +21,15 @@ const Portfolio = ({ titulo, itens, slide, toggler, aoMostrarPortfolioLightBox, 
                         itens.map((item) => (
                             <PortfolioCard
                                 key={item.id}
-                                id={item.id}
-                                imagem={item.imagem}
-                                alt={item.alt}
-                                nome={item.nome}
-                                area={item.area}
-                                aoMostrarLightBox={(id) => aoMostrarPortfolioLightBox(id)}
+                                item={item}
                             />
                         ))
                     }
 
                     <FsLightbox
-                        toggler={toggler}
-                        sources={sourceLightBox}
-                        slide={slide}
+                        toggler={lightboxController.toggler}
+                        slide={lightboxController.slide}                        
+                        sources={Object.values(portfolio)}
                     />
                 </div>
             </div>

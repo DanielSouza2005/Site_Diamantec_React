@@ -1,7 +1,7 @@
 import { Link } from "react-scroll";
 import styles from "./banner.module.css";
 
-const Banner = (props) => {
+const Banner = ({ titulo, subTitulo, botaoSaibaMais }) => {
     return (
         <section
             id="banner"
@@ -10,18 +10,19 @@ const Banner = (props) => {
             <div className={styles.bannerContainer}>
                 <h1>
                     <span>
-                        {props.titulo}
+                        {titulo}
                     </span>
                 </h1>
-                <h2>{props.subTitulo}</h2>
+                <h2>{subTitulo}</h2>
                 <div className={styles.btnSaibamais}>
                     <Link
                         to="servicos"
                         spy={true}
                         smooth={true}
                         offset={-20}
-                        duration={750}>
-                        {props.botaoSaibaMais}
+                        duration={750}
+                    >
+                        {botaoSaibaMais}
                     </Link>
                 </div>
             </div>

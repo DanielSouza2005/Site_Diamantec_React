@@ -5,7 +5,7 @@ import NavegadorLink from "./NavegadorLink";
 import styles from "./navegador.module.css";
 import { useTraducao } from "../../Hooks/Traducao";
 
-const Navegador = ({ itensMenu, clickNavMobile, MenuAberto, onChangeLanguage }) => {
+const Navegador = ({ itensMenu, clickNavMobile, MenuAberto }) => {
 
     const { idioma, aoTrocarIdioma } = useTraducao();
 

@@ -12,24 +12,16 @@ import Time from './Componentes/Time';
 import ScrollTopo from './Componentes/ScrollTopo';
 import Contato from './Componentes/Contato';
 
-import { useLightBox } from './Hooks/LightBox';
-import { useMenu } from './Hooks/Menu';
 import { useTraducao } from './Hooks/Traducao';
 
-function App() {
-  const { lightboxController, aoMostrarLightBox } = useLightBox();
-  const { menuAberto, aoMostrarMenu } = useMenu();
+function App() {  
   const { conteudo } = useTraducao();
   
   const [empresa] = useState("Diamantec");  
 
   return (
     <div className="App">
-      <Cabecalho
-        itensMenu={conteudo.menu}
-        mostraMenu={aoMostrarMenu}
-        MenuAberto={menuAberto}
-      />
+      <Cabecalho />
 
       <Banner
         titulo={conteudo.banner.titulo}
@@ -51,9 +43,6 @@ function App() {
       <Portfolio
         titulo={conteudo.portfolio.titulo}
         itens={conteudo.portfolio.itens}
-        toggler={lightboxController.toggler}
-        slide={lightboxController.slide}
-        aoMostrarPortfolioLightBox={aoMostrarLightBox}
         sourceLightBox={Object.values(portfolioImages)}
       />
 
@@ -64,17 +53,6 @@ function App() {
 
       <Contato
         titulo={conteudo.contato.titulo}
-
-        endereco={conteudo.contato.endereco}
-        instagram={conteudo.contato.redesSociais.instagram}
-        linktree={conteudo.contato.redesSociais.linktree}
-
-        inputNome={conteudo.contato.formInputs.nome}
-        inputAssunto={conteudo.contato.formInputs.assunto}
-        inputMensagem={conteudo.contato.formInputs.mensagem}
-        inputBotao={conteudo.contato.formInputs.botao}
-
-        statusEmailForm={conteudo.contato.envioEmailStatus}
       />
 
       <Rodape

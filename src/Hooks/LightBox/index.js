@@ -4,7 +4,8 @@ import { MOSTRAR_LIGHTBOX } from "../../Reducer/LightBox";
 
 export const useLightBox = () => {
 
-    const { lightboxController, dispatcherLightboxController } = useContext(LightBoxContext);
+    const { lightboxController, dispatcherLightboxController,
+            portfolio, setPortfolio } = useContext(LightBoxContext);
 
     const aoMostrarLightBox = (numero) => {
         dispatcherLightboxController({
@@ -15,6 +16,7 @@ export const useLightBox = () => {
 
     return {
         lightboxController, dispatcherLightboxController,
+        portfolio, setPortfolio,
         aoMostrarLightBox
     }
 }

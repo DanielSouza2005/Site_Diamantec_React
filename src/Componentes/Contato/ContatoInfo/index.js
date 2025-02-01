@@ -5,8 +5,6 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
 
 const ContatoInfo = ({ endereco, instagram, linktree }) => {
-    console.log(endereco);
-
     return (
         <div className={styles.contatoInfo}>
             <div className={styles.contatoInfoEndereco}>

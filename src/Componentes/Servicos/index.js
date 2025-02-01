@@ -15,9 +15,7 @@ const Servicos = ({ itens, titulo }) => {
                        itens.map((servico) => (
                          <ServicosCard 
                             key={servico.id}
-                            titulo={servico.titulo}
-                            texto={servico.texto}
-                            icone={servico.icone}
+                            servico={servico}
                          />  
                        ))
                     }                                      

@@ -1,14 +1,14 @@
 import styles from "./servicoscard.module.css";
 
-const ServicosCard = ({ titulo, texto, icone }) => {
+const ServicosCard = ({ servico }) => {
     return (
         <div className={styles.servicosCard}>
             <div className={styles.servicosCardContainer}>
                 <div className={styles.servicosCardIconeBox}>
-                    {icone}
+                    {servico.icone}
                 </div>
-                <h4>{titulo}</h4>
-                <p>{texto}</p>
+                <h4>{servico.titulo}</h4>
+                <p>{servico.texto}</p>
             </div>
         </div>
     );

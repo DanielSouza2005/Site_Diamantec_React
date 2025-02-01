@@ -19,9 +19,13 @@ const SobreNos = ({ titulo, alt, textos }) => {
                     <div className={styles.sobreConteudoTexto}>
                         {
                             textos.map((texto, index) => (
-                                <div key={index}>
-                                    <h3></h3>
-                                    <p>{texto}</p>
+                                <div 
+                                    className={styles.sobreConteudoTextoContainer}
+                                    key={index}
+                                >
+                                    <p>
+                                        {texto}
+                                    </p>
                                 </div>
                             ))
                         }

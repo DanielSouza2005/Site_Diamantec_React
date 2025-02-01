@@ -103,3 +103,7 @@
     margin-bottom: .5rem;
     line-height: 1.2;
 }
+
+.sobreConteudoTextoContainer {
+    padding-bottom: .75rem !important;
+}

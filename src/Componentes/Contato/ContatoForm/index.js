@@ -4,7 +4,7 @@ import Memo from "../../Memo";
 import styles from "./ContatoForm.module.css";
 import { useContatoForm } from "../../../Hooks/ContatoForm";
 
-const ContatoForm = ({ inputNome, inputAssunto, inputMensagem, inputBotao }) => {
+const ContatoForm = ({ inputNome, inputAssunto, inputMensagem, inputBotao, statusEmailForm }) => {
 
     const {
         nomeContatoForm, setNomeContatoForm,
@@ -79,27 +79,30 @@ const ContatoForm = ({ inputNome, inputAssunto, inputMensagem, inputBotao }) => 
                     <div className={styles.statusEnvioEmail}>
                         {
                             carregandoContatoForm &&
-                            <div className={styles.carregando}>Carregando...</div>
+                            <div className={styles.carregando}>{statusEmailForm.carregando}</div>
                         }
 
                         {
                             !carregandoContatoForm && erroContatoForm && (
-                            <div className={styles.erroMensagem}>Não foi possível realizar o envio do email. Tente novamente mais tarde.</div>
-                        )}
+                                <div className={styles.erroMensagem}>{statusEmailForm.erro}</div>
+                            )}
 
                         {
                             !carregandoContatoForm && envioSucesso && (
-                            <div className={styles.mensagemEnviada}>Sua mensagem foi enviada. Obrigado!</div>
-                        )}
+                                <div className={styles.mensagemEnviada}>{statusEmailForm.sucesso}</div>
+                            )}
                     </div>
 
-                    <div className={styles.contatoBotaoBox}>
-                        <Botao
-                            tipo="submit"
-                        >
-                            {inputBotao}
-                        </Botao>
-                    </div>
+                    {
+                        !carregandoContatoForm && !envioSucesso && !erroContatoForm &&
+                        <div className={styles.contatoBotaoBox}>
+                            <Botao
+                                tipo="submit"
+                            >
+                                {inputBotao}
+                            </Botao>
+                        </div>
+                    }
                 </form>
             </div>
         </div>

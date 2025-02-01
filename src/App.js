@@ -182,6 +182,7 @@ function App() {
       setContatoFormAssunto("Assunto");
       setContatoFormMensagem("Mensagem");
       setContatoFormBotao("Mande sua Mensagem");
+      setContatoEnvioEmailStatus({ carregando: "Carregando...", erro: "Não foi possível realizar o envio do email. Tente novamente mais tarde.", sucesso: "Sua mensagem foi enviada. Obrigado!" });
 
       setTextoDireitos("Todos os Direitos Reservados");
     }
@@ -340,10 +341,10 @@ function App() {
       setContatoInstagram({ titulo: "Instagram", conteudo: "@diamantec_tec" });
       setContatoLinktree({ titulo: "Linktree", conteudo: "linktr.ee/diamantec_" });
       setContatoFormNome("Your Name");
-      
       setContatoFormAssunto("Subject");
       setContatoFormMensagem("Message");
       setContatoFormBotao("Send Message");
+      setContatoEnvioEmailStatus({ carregando: "Loading...", erro: "The email could not be sent. Please try again later.", sucesso: "Your message has been sent. Thanks!" });
 
       setTextoDireitos("All Rights Reserved");
     }
@@ -384,6 +385,7 @@ function App() {
   const [contatoFormAssunto, setContatoFormAssunto] = useState("");
   const [contatoFormMensagem, setContatoFormMensagem] = useState("");
   const [contatoFormBotao, setContatoFormBotao] = useState("");
+  const [contatoEnvioEmailStatus, setContatoEnvioEmailStatus] = useState({});
 
   const [textoDireitos, setTextoDireitos] = useState("");
 
@@ -452,9 +454,9 @@ function App() {
         time={time}
       />
 
-      <Contato 
+      <Contato
         titulo={contatoTitulo}
-        
+
         endereco={contatoEndereco}
         instagram={contatoInstagram}
         linktree={contatoLinktree}
@@ -463,6 +465,8 @@ function App() {
         inputAssunto={contatoFormAssunto}
         inputMensagem={contatoFormMensagem}
         inputBotao={contatoFormBotao}
+
+        statusEmailForm={contatoEnvioEmailStatus}
       />
 
       <Rodape

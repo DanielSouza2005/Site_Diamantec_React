@@ -4,7 +4,8 @@ import ContatoInfo from "./ContatoInfo";
 
 const Contato = ({ titulo, 
                    endereco, instagram, linktree, 
-                   inputNome, inputEmail, inputAssunto, inputMensagem, inputBotao }) => {
+                   inputNome, inputEmail, inputAssunto, inputMensagem, inputBotao,
+                   statusEmailForm }) => {
     return (
         <section
             id="contato"
@@ -27,6 +28,7 @@ const Contato = ({ titulo,
                     inputAssunto={inputAssunto}
                     inputMensagem={inputMensagem}
                     inputBotao={inputBotao}
+                    statusEmailForm={statusEmailForm}
                 />
             </div>
         </section>

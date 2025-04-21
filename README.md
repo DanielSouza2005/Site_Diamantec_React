@@ -1,5 +1,5 @@
 <h1>💎 Diamantec Landing Page</h1>
-<img loading="lazy" src="https://img.shields.io/github/stars/DanielSouza2005?style=social"/>
+<img loading="lazy" src="https://img.shields.io/github/stars/DanielSouza2005/Site_Diamantec_React?style=social"/>
 
 <h2>💡 Sobre </h2>
 <p>Landing Page da empresa criada durante o trabalho de conclusão do curso Técnico em Informática.</p>
